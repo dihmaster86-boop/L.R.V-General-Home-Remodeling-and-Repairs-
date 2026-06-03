@@ -453,12 +453,12 @@
   .contact-card {
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
     padding: 24px 28px;
     background: var(--mid);
     border-left: 3px solid var(--gold);
   }
-  .contact-card-icon { font-size: 1.5rem; }
+  .contact-card-icon { font-size: 1.5rem; margin-top: 4px; }
   .contact-card-label {
     font-size: 0.7rem;
     letter-spacing: 0.15em;
@@ -472,8 +472,15 @@
     font-weight: 600;
     color: var(--white);
   }
-  .contact-card-val a { color: inherit; text-decoration: none; }
+  .contact-card-val a { color: inherit; text-decoration: none; transition: color 0.2s; }
   .contact-card-val a:hover { color: var(--gold); }
+  .link-fallback {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+  .link-fallback strong { color: var(--gold); }
 
   .contact-form {}
   .contact-form h3 {
@@ -839,7 +846,14 @@
         <div class="contact-card-icon">💬</div>
         <div>
           <div class="contact-card-label">Facebook Messenger</div>
-          <div class="contact-card-val"><a href="https://www.facebook.com/lrvgeneral" target="_blank">Message Us on Facebook</a></div>
+          <div class="contact-card-val">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              Message Us on Facebook
+            </a>
+            <p class="link-fallback">
+              (If the button doesn't open, simply search for <strong>"LRV General Home Remodeling and Repairs"</strong> directly on Facebook!)
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -890,7 +904,7 @@
   </div>
   <p>© 2025 LRV General Home Remodeling & Repairs. All rights reserved.<br>Serving DFW for 25+ years.</p>
   <div class="footer-fb">
-    <a href="https://www.facebook.com/lrvgeneral" target="_blank">📘 Follow on Facebook</a>
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘 Follow on Facebook</a>
   </div>
 </footer>
 
